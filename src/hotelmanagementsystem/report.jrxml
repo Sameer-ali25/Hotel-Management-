@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="226" pageHeight="425" columnWidth="186" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="072e3610-24c8-4cb8-b998-5d6000638db4">
+	<property name="ireport.zoom" value="3.1384283767210035"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="hotelParameter" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     customer_receipt.`id` AS customer_receipt_id,
+     customer_receipt.`customer_num` AS customer_receipt_customer_num,
+     customer_receipt.`total` AS customer_receipt_total,
+     customer_receipt.`date` AS customer_receipt_date,
+     customer.`id` AS customer_id,
+     customer.`customer_id` AS customer_customer_id,
+     customer.`roomType` AS customer_roomType,
+     customer.`roomNumber` AS customer_roomNumber,
+     customer.`firstName` AS customer_firstName,
+     customer.`lastName` AS customer_lastName,
+     customer.`phoneNumber` AS customer_phoneNumber,
+     customer.`email` AS customer_email,
+     customer.`checkIn` AS customer_checkIn,
+     customer.`checkOut` AS customer_checkOut
+FROM
+     `customer_receipt` customer_receipt INNER JOIN `customer` customer ON customer_receipt.`customer_num` = customer.`customer_id` WHERE customer.`customer_id` = $P{hotelParameter}]]>
+	</queryString>
+	<field name="customer_receipt_id" class="java.lang.Integer"/>
+	<field name="customer_receipt_customer_num" class="java.lang.Integer"/>
+	<field name="customer_receipt_total" class="java.lang.Double"/>
+	<field name="customer_receipt_date" class="java.sql.Date"/>
+	<field name="customer_id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="customer_customer_id" class="java.lang.Integer"/>
+	<field name="customer_roomType" class="java.lang.String"/>
+	<field name="customer_roomNumber" class="java.lang.Integer"/>
+	<field name="customer_firstName" class="java.lang.String"/>
+	<field name="customer_lastName" class="java.lang.String"/>
+	<field name="customer_phoneNumber" class="java.lang.String"/>
+	<field name="customer_email" class="java.lang.String"/>
+	<field name="customer_checkIn" class="java.sql.Date"/>
+	<field name="customer_checkOut" class="java.sql.Date"/>
+	<group name="hotelFooter">
+		<groupExpression><![CDATA[$F{customer_receipt_id}]]></groupExpression>
+		<groupFooter>
+			<band height="50">
+				<staticText>
+					<reportElement x="66" y="19" width="66" height="20" uuid="7e194540-d310-4d86-9b1f-af48e51979cd"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Total Payment:$]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="137" y="19" width="14" height="20" uuid="6640bb3f-9e90-4293-a47b-7c3dae0c2c5c"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{customer_receipt_total}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="0" y="8" width="186" height="1" uuid="722127c5-72d0-4fd2-9c6a-08956c8d63ca"/>
+				</line>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="16" y="21" width="147" height="27" uuid="c4d9a3b8-c132-40d2-9426-976330912346"/>
+				<textElement textAlignment="Center">
+					<font fontName="Ink Free" size="18"/>
+				</textElement>
+				<text><![CDATA[CapitalRest Hotels]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="105" y="1" width="46" height="20" uuid="0fbad2b2-4ba2-4fd1-b1e6-42d3525a2211"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Customer #]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="151" y="1" width="27" height="14" uuid="77f83158-d97a-4aeb-92f4-b7f19455852a"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{customer_receipt_customer_num}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="24" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="44" height="20" uuid="0c87dea0-2a0c-42c3-98e5-d8bbbe02b538"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Room Type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="44" y="0" width="44" height="20" uuid="6332ced7-53ba-43d2-bc0b-f0d6933019c5"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Room #]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="132" y="0" width="54" height="20" uuid="ae4b1114-b566-488d-b6f4-019cf8615d2a"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Checked-Out]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="88" y="0" width="44" height="20" uuid="6abe3183-d7a4-4141-9832-10c72a5a1562"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Checked-In]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="21" width="186" height="1" uuid="91749edb-8dd8-43e4-b3e0-13e2b902f6a9"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="27" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="5" width="44" height="20" uuid="3dfb0c9e-1ed7-43fb-a6a8-6213c41e1e83"/>
+				<textElement textAlignment="Center">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{customer_roomType}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="44" y="5" width="39" height="20" uuid="23f30859-f5cd-4692-8880-aefd4ef0cf8b"/>
+				<textElement textAlignment="Center">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{customer_roomNumber}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="83" y="5" width="54" height="20" uuid="cafc99ad-fb03-4d84-8721-0af0d898f954"/>
+				<textElement textAlignment="Center">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{customer_checkIn}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="137" y="5" width="49" height="20" uuid="9a81058d-4382-44c9-acf8-1b1e23675b56"/>
+				<textElement textAlignment="Center">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{customer_checkOut}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="10" splitType="Stretch">
+			<line>
+				<reportElement x="4" y="1" width="182" height="1" uuid="f3dfb8d5-1ae0-4263-9316-33fae43a94b4"/>
+				<graphicElement>
+					<pen lineStyle="Double"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

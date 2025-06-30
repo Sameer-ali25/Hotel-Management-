@@ -1,0 +1,102 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jun 22, 2025, 3:22:03 PM
+    Author     : samee
+*/
+.leftPanel{
+    -fx-background-color: #2c3e50;
+}
+
+lftlabel{
+     -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
+}
+
+.button{
+     -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+}
+
+.right{
+     -fx-background-color: #ecf0f1;
+    -fx-border-color: #bdc3c7;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 2, 2);
+}
+
+rightlabel{
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+.chart{
+    -fx-background-color: #ffffff;
+    -fx-border-color: #dcdcdc;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+.cm{
+    -fx-background-color: b9f3f0;
+-fx-text-fill: white;
+-fx-font-weight: bold;
+-fx-background-radius: 5px;
+-fx-cursor: hand;
+}
+
+.TextName{
+    -fx-text-fill: white;
+-fx-font-size: 32px;
+-fx-font-weight: bold;
+}
+
+.small{
+    -fx-background-color: #F8F6F0;
+    -fx-border-color: #bdc3c7;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 2, 2);
+}
+
+.Text2{
+    -fx-text-fill: white;
+-fx-font-size: 25px;
+-fx-font-weight: bold;
+}
+
+.TextField{
+    -fx-background-color: #f1f1f1;
+-fx-background-radius: 5px;
+-fx-border-color: #ced4da;
+-fx-border-radius: 5px;
+-fx-padding: 8px;
+
+}
+
+.combo-box {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #ced4da;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-padding: 5px;
+    -fx-font-size: 14px;
+    -fx-text-fill: #2c3e50;
+}
+
+.table-view {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #dee2e6;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-table-cell-border-color: transparent;
+    -fx-padding: 5px;
+}

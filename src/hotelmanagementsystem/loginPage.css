@@ -1,0 +1,56 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jun 22, 2025, 3:01:33 PM
+    Author     : samee
+*/
+.background{
+-fx-background-color: linear-gradient(to right, #f8f9fa, #e9ecef);
+}
+
+.leftPanel{
+    -fx-background-color: #2c3e50;
+
+}
+
+.TextStyle{
+    -fx-text-fill: white;
+-fx-font-size: 40px;
+-fx-font-weight: bold;
+
+}
+
+.RightForm{
+    -fx-background-color: #ffffff;
+-fx-border-color: #dee2e6;
+-fx-border-width: 1px;
+-fx-border-radius: 10px;
+-fx-background-radius: 10px;
+
+}
+
+.TextField{
+    -fx-background-color: #f1f1f1;
+-fx-background-radius: 5px;
+-fx-border-color: #ced4da;
+-fx-border-radius: 5px;
+-fx-padding: 8px;
+
+}
+.buttonType{
+    -fx-background-color: #007bff;
+-fx-text-fill: white;
+-fx-font-weight: bold;
+-fx-background-radius: 5px;
+-fx-cursor: hand;
+}
+
+.TextName{
+    -fx-text-fill: white;
+-fx-font-size: 23px;
+-fx-font-weight: bold;
+
+}
